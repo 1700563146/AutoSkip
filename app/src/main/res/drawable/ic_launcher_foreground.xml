@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A "skip forward" glyph, centred inside the 72dp adaptive-icon safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,34 L66,54 L40,74 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,34 L76,34 L76,74 L68,74 Z" />
+</vector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      NoActionBar on purpose. From targetSdk 35 the system forces edge-to-edge
+      display, and AppCompat's built-in ActionBar only insets itself — the
+      content frame underneath keeps drawing from screen coordinate 0, so every
+      screen ended up with its first rows hidden behind the app bar.
+
+      Owning the Toolbar in the layout instead lets BaseActivity pad the single
+      root view by the system-bar insets, which moves the toolbar *and* the
+      content down together.
+    -->
+    <style name="Theme.AutoSkip" parent="Theme.Material3.DayNight.NoActionBar" />
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">自动跳过</string>
+
+    <string name="accessibility_service_label">自动跳过</string>
+    <string name="accessibility_service_description">读取屏幕上的文字，发现「跳过」「关闭广告」等按钮时自动点击。用于跳过应用开屏广告。不会上传任何数据。</string>
+
+    <string name="title_settings">参数设置</string>
+    <string name="title_whitelist">应用白名单</string>
+    <string name="title_test_mode">测试模式</string>
+
+    <!-- Main -->
+    <string name="section_status">服务状态</string>
+    <string name="section_actions">功能入口</string>
+    <string name="section_log">运行日志</string>
+    <string name="label_a11y_service">无障碍服务</string>
+    <string name="label_overlay">悬浮窗权限</string>
+    <string name="label_notification">通知权限</string>
+    <string name="status_enabled">已开启</string>
+    <string name="status_disabled">未开启</string>
+    <string name="action_grant">去开启</string>
+    <string name="action_open_settings">参数设置</string>
+    <string name="action_open_whitelist">应用白名单</string>
+    <string name="action_open_test_mode">测试模式</string>
+    <string name="switch_master">启用自动跳过</string>
+    <string name="switch_master_hint">关闭后服务仍在运行，但不会再扫描和点击</string>
+    <string name="log_empty">暂无日志</string>
+    <string name="action_clear_log">清空</string>
+    <string name="stats_format">累计扫描 %1$d 次 · 点击 %2$d 次</string>
+
+    <!-- Settings -->
+    <string name="section_throttle">防抖动</string>
+    <string name="section_guard">防误触</string>
+    <string name="section_whitelist_policy">白名单策略</string>
+    <string name="label_debounce">内容变化防抖间隔</string>
+    <string name="label_debounce_hint">两次扫描之间的最小间隔。调大更省电，调小响应更快。</string>
+    <string name="label_cooldown">全局点击冷却</string>
+    <string name="label_cooldown_hint">两次成功点击之间的最小间隔，防止连点。</string>
+    <string name="label_node_cooldown">同一节点冷却</string>
+    <string name="label_node_cooldown_hint">同一个按钮在此时长内不会被重复点击。</string>
+    <string name="label_max_scan">单次扫描节点上限</string>
+    <string name="label_max_scan_hint">节点树过大时提前放弃，避免卡顿。</string>
+    <string name="label_scan_timeout">单次扫描超时</string>
+    <string name="label_allow_self">允许点击测试模式悬浮窗</string>
+    <string name="label_allow_self_hint">关闭后，本应用自己的界面（包括测试悬浮窗）一律不会被自动点击，可用于验证「自事件抑制」。</string>
+    <string name="label_default_allow">未列出的应用默认启用</string>
+    <string name="label_default_allow_hint">关闭后，只有在白名单里显式启用的应用才会被处理。</string>
+    <string name="unit_ms">%d 毫秒</string>
+    <string name="unit_count">%d 个</string>
+    <string name="action_reset_defaults">恢复默认值</string>
+    <string name="toast_reset_done">已恢复默认值</string>
+
+    <!-- Whitelist -->
+    <string name="whitelist_intro">白名单为占位功能：开关会持久化保存，但当前版本尚未根据白名单分发规则，所有未被显式禁用的应用都会使用同一套内置规则。</string>
+    <string name="whitelist_empty">未找到可显示的应用</string>
+    <string name="whitelist_loading">正在读取应用列表…</string>
+    <string name="action_reload">刷新</string>
+
+    <!-- Test mode -->
+    <string name="test_mode_intro">开启后，屏幕上会随机位置浮出一个「跳过」按钮用来验证自动点击。它由无障碍服务识别并点击，点中即消失，随后在新位置重新出现。</string>
+    <string name="test_mode_need_overlay">需要先授予悬浮窗权限</string>
+    <string name="test_mode_need_a11y">需要先开启无障碍服务</string>
+    <string name="action_start_test">开始测试</string>
+    <string name="action_stop_test">停止测试</string>
+    <string name="label_test_interval">弹出间隔</string>
+    <string name="label_test_interval_hint">按钮被点掉后，隔多久在新位置重新出现。</string>
+    <!--
+      "自动命中" is counted by the accessibility service itself, so tapping the
+      button by hand dismisses it without inflating the hit count: 弹出 may then
+      exceed 自动命中, which correctly means the service was not the one that
+      clicked it.
+    -->
+    <string name="test_stats_format">弹出 %1$d 次 · 自动命中 %2$d 次</string>
+    <string name="test_hit_rate">命中率 %1$d%%</string>
+    <string name="test_mode_running">测试进行中…</string>
+    <string name="test_mode_stopped">测试已停止</string>
+    <string name="overlay_label">跳过</string>
+    <string name="action_stop_test_short">停止</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">测试模式</string>
+    <string name="notif_channel_desc">测试模式运行时的常驻通知</string>
+    <string name="notif_title">测试模式运行中</string>
+    <string name="notif_text">屏幕上会随机出现「跳过」按钮</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Stable id for the test-mode overlay button. AutoSkipService compares the
+      matched node's viewIdResourceName against this id to decide whether a node
+      belonging to our own package is the sanctioned test target or just our own
+      settings UI (which must never be auto-clicked).
+    -->
+    <item name="test_overlay_text" type="id" />
+</resources>

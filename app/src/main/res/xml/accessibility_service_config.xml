@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Deliberately NOT set:
+
+  * FLAG_REQUEST_TOUCH_EXPLORATION_MODE - it changes global touch semantics and
+    breaks ordinary gestures for the user.
+  * FLAG_INCLUDE_NOT_IMPORTANT_VIEWS - multiplies TYPE_WINDOW_CONTENT_CHANGED
+    volume for very little matching benefit.
+
+  FLAG_RETRIEVE_INTERACTIVE_WINDOWS *is* set. It is needed to reach nodes that
+  live in a non-focused window, which is exactly the case for the test mode's
+  TYPE_APPLICATION_OVERLAY button: it is FLAG_NOT_FOCUSABLE, so it never becomes
+  the active window and rootInActiveWindow alone would never see it.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds|flagRetrieveInteractiveWindows|flagDefault"
+    android:canPerformGestures="true"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_service_description"
+    android:isAccessibilityTool="true"
+    android:notificationTimeout="100"
+    android:settingsActivity="com.example.autoskip.ui.MainActivity" />
